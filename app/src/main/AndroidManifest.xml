@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- web -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/world"
+        android:label="Timeline location_kotlin"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Get_Current_kotlin"
+        tools:targetApi="31">
+        <activity
+            android:name=".Trackingpage"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewPage"
+            android:exported="false" />
+        <activity
+            android:name=".covid19"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBCnivkECpXA2wiNuulTmgQxN6OY4NAX2Q" />
+
+        <activity
+            android:name=".Get_Map_Time_line"
+            android:exported="false"
+            android:label="@string/title_activity_get_map_time_line" />
+        <activity
+            android:name=".listview_timeline"
+            android:exported="false" />
+        <activity
+            android:name=".ReadLocation"
+            android:exported="false" />
+        <activity
+            android:name=".SaveLocation"
+            android:exported="false" />
+        <activity
+            android:name=".save_read"
+            android:exported="false" />
+        <activity
+            android:name=".current_location"
+            android:exported="false"
+            android:label="@string/title_activity_current_location" />
+        <activity
+            android:name=".GetLocation"
+            android:exported="false" />
+        <activity
+            android:name=".activity_splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listview_timeline"
+    android:background="@drawable/bg_3">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/rounded_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:src="@drawable/rounded_corner2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rounded_bg"
+        app:layout_constraintEnd_toEndOf="@+id/rounded_bg"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:srcCompat="@drawable/img" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/inputid"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:text="ID : "-->
+<!--        android:textSize="23sp"-->
+<!--        android:fontFamily="@font/mm"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/secomdary_color3"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/rounded_bg"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/rounded_bg" />-->
+    <TextView
+        android:id="@+id/inputlatitube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="50dp"
+        android:text="latitube : "
+        android:textSize="23sp"
+        android:fontFamily="@font/mm"
+        android:textStyle="bold"
+        android:textColor="@color/green_dark"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:layout_constraintTop_toTopOf="@+id/rounded_bg" />
+
+    <TextView
+        android:id="@+id/inputlongitube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mm"
+        android:text="longitube : "
+        android:textColor="@color/green_dark"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputlatitube"
+        app:layout_constraintTop_toBottomOf="@+id/inputlatitube" />
+
+    <TextView
+        android:id="@+id/inputdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mm"
+        android:text="date : "
+        android:textColor="@color/green_dark"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputlongitube"
+        app:layout_constraintTop_toBottomOf="@+id/inputlongitube" />
+
+    <TextView
+        android:id="@+id/inputtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mm"
+        android:text="time : "
+        android:textColor="@color/green_dark"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputdate"
+        app:layout_constraintTop_toBottomOf="@+id/inputdate" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_getmap"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_upper2"
+        android:text="Get map"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/gps" />
+
+    <ImageView
+        android:id="@+id/gps"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/rounded_bg"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:layout_constraintTop_toBottomOf="@+id/inputtime"
+        app:srcCompat="@drawable/treasuremap" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mm"
+        android:text="Do you want to check location on google map?"
+        android:textColor="#818181"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/gps"
+        app:layout_constraintStart_toStartOf="@+id/gps"
+        app:layout_constraintTop_toBottomOf="@+id/gps" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
